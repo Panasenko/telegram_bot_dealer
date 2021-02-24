@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  nginx:
+   image: telegram_bot:latest
+   hostname: bot
+   container_name: bot
+   ports:
+   - "3000:3000"
+   volumes:
+   - ./:/usr/src/app
+   networks:
+   - app-network 
+
+
+
+
+
+networks:
+    app-network:   
+        driver: bridge
