@@ -5,6 +5,8 @@ import { TOKEN } from '../config/config.js'
 
 import { foo } from '../command/start.js'
 
+import { command } from '../command/index.js'
+
 import { settings } from '../command/settings.js' 
 
 
@@ -14,7 +16,10 @@ if (TOKEN === undefined) {
 
 const bot = new Telegraf(TOKEN)
 
-settings(bot)
+//settings(bot)
+command(bot)
+
+
 
 
 
