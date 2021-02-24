@@ -4,7 +4,7 @@ export function getMainMenu() {
     return Markup
     .keyboard([
         ['Мои задачи', 'Добавить задачу'],
-        ['Смотивируй меня']
+        ['Настройки']
     ])
     .oneTime()
     .resize()

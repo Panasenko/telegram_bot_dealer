@@ -1,6 +1,6 @@
 import {PORT} from './src/config/config.js'
-import bot from './src/bin/bot.js'
-import app from './src/bin/app.js'
+import bot from './src/bot.js'
+import app from './src/app.js'
 
 const port = PORT || 3000;
 

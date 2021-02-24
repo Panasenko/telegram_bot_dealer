@@ -1,7 +1,7 @@
 import Subscribe from './Subscribe.js'
 import Help from './Help.js'
 import Settings from './Settings.js'
-import Start from './Start.js'
+import Start from '../controlles/start/Start.js'
 
 export const command = bot => {
 
