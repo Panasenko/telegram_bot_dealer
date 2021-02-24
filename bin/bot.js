@@ -5,12 +5,19 @@ import { TOKEN } from '../config/config.js'
 
 import { foo } from '../command/start.js'
 
+import { settings } from '../command/settings.js' 
+
 
 if (TOKEN === undefined) {
     throw new Error('BOT_TOKEN must be provided!')
   }
 
-let bot = new Telegraf(TOKEN)
+const bot = new Telegraf(TOKEN)
+
+settings(bot)
+
+
+
 
 
 bot.command('time', foo)
