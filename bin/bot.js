@@ -1,32 +1,25 @@
-
 import { Telegraf } from 'telegraf'
-import { getMainMenu } from '../keyboards/keyboards.js'
 import { TOKEN } from '../config/config.js'
-
-import { foo } from '../command/start.js'
 
 import { command } from '../command/index.js'
 
-import { settings } from '../command/settings.js' 
-
-
 if (TOKEN === undefined) {
     throw new Error('BOT_TOKEN must be provided!')
-  }
+}
 
 const bot = new Telegraf(TOKEN)
 
-//settings(bot)
+
+
+bot.use(async (ctx, next) => {
+    console.log(ctx)
+    
+    await next() // runs next middleware
+    // runs after next middleware finishes
+
+  })
+
 command(bot)
-
-
-
-
-
-
-
-bot.command('time', foo)
-
 
 /* 
 bot.command('time', ctx => {

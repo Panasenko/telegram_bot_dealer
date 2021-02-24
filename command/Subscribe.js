@@ -1,16 +1,11 @@
-class Subscribe {
+export default class Subscribe {
 
-    sub(ctx) {
-
-        ctx.reply('sub')
-
-    }
-
-    unsub(ctx) {
+    subscribe(ctx) {
         ctx.reply('sub')
     }
 
-
+    unsubscribe(ctx) {
+        ctx.reply('unsub')
+    }
 }
 
-export default Subscribe
