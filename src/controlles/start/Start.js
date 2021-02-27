@@ -1,6 +1,6 @@
-import { getMainMenu } from './keyboards.js'
+const getMainMenu = require('./keyboards') 
 
-export default class Start {
+module.exports = class Start {
 
     start(ctx) {
         ctx.replyWithHTML(

@@ -1,9 +1,9 @@
-import Subscribe from './Subscribe.js'
-import Help from './Help.js'
-import Settings from './Settings.js'
-import Start from '../controlles/start/Start.js'
+const Subscribe = require('./Subscribe') 
+const Help = require('./Help') 
+const Settings = require('./Settings') 
+const Start = require('../controlles/start/Start') 
 
-export const command = bot => {
+module.exports = function command (bot) {
 
     const st = new Start()
     bot.start(st.start)

@@ -1,16 +1,22 @@
-import { Telegraf } from 'telegraf'
-import { TOKEN } from './config/config.js'
+const config = require('config') 
+const { Telegraf } = require("telegraf")
 
-import { command } from './command/index.js'
-import { middelware } from './middleware/console.js'
+
+//const Telegraf = require('telegraf')
+//const session = require('telegraf/session')
+
+const command = require('./command/index') 
+const middelware = require('./middleware/console') 
+
+const TOKEN = config.get('token')
 
 if (TOKEN === undefined) {
     throw new Error('BOT_TOKEN must be provided!')
 }
 
 const bot = new Telegraf(TOKEN)
+
 middelware(bot)
 command(bot)
 
-
-export default bot
+module.exports = bot

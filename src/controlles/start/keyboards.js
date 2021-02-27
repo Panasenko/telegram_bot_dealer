@@ -1,9 +1,9 @@
-import { Markup } from 'telegraf'
+const { Markup } = require('telegraf') 
 
-export function getMainMenu() {
+module.exports = function getMainMenu () {
     return Markup
     .keyboard([
-        ['Мои задачи', 'Добавить задачу'],
+        ['Показать курсы', 'Подписка на изменения'],
         ['Настройки']
     ])
     .oneTime()

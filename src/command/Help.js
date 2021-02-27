@@ -1,4 +1,4 @@
-export default class Help {
+module.exports = class Help {
 
     help(ctx) {
         ctx.reply(

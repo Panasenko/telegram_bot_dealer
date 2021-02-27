@@ -1,12 +1,13 @@
-import {PORT} from './src/config/config.js'
-import bot from './src/bot.js'
-import app from './src/app.js'
+const config = require('config') 
+const bot = require('./src/bot') 
+const app = require('./src/app') 
 
-const port = PORT || 3000;
+
+const PORT = config.get("port") || 3000
 
 bot.launch()
 
-app.listen(PORT, () => console.log(`My server is running on port ${port}`))
+app.listen(PORT, () => console.log(`My server is running on port ${PORT}`))
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))

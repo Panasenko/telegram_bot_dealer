@@ -1,4 +1,4 @@
-export function middelware(bot) {
+module.exports = function middelware (bot) {
 
     bot.use(async (ctx, next) => {
         console.log(ctx.update)

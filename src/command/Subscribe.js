@@ -1,4 +1,4 @@
-export default class Subscribe {
+module.exports = class Subscribe {
 
     subscribe(ctx) {
         ctx.reply('sub')
